@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Adicionar e Remover Linha com jQuery</title>
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="funcao.js"></script> 
+</head>
+<body>
+
+<div class="container">
+<h2>cadastro de Funcionários</h2>
+<hr /> 
+<br /><br />
+<div class="table-responsive">
+ <table id="products-table" class="table table-hover table-bordered">
+  <tbody>
+  <tr>
+     <th>Código de pessoa</th>
+     <th>Nome</th>
+     <th>Cargo - Função</th>
+     <th>E-mail</th>
+                          <th>CPF</th>
+     <th class="actions">Ações</th>
+   </tr>
+   <tr>
+     <td><input type="text" name="id"></td>
+                          <td><input type="text" name="nome"></td>
+     <td><select name="cargo">
+             <option value="gerente" name="gerente">Gerente</option>
+             <option value="Professor" name="Professor">Professor</option>
+       <option value="Programador" name="Programador">Programador</option>
+         </select>
+                        </td>
+                        <td><input type="text" name="email"></td>
+   <td><input type="text" name="cpf"></td>  
+   <td class="actions">
+      <button class="btn btn-large btn-danger" onclick="RemoveTableRow(this)" type="button">Remover</button>
+   </td>
+  </tr>
+  </tbody>
+                <tfoot>
+  <tr>
+      <td colspan="6" style="text-align: left;">
+          <button class="btn btn-large btn-success" onclick="AddTableRow(this)" type="button">Adicionar Funcionário</button>
+      </td>
+  </tr>
+               </tfoot>
+ </table>
+</div>
+</div>
+
+</body>
+</html>
