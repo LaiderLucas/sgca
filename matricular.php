@@ -47,10 +47,10 @@ require_once('menu.php');
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-title">
-                            <h4>Cadastro de Alunos</h4>
+                            <h4>Cadastro de Alunos No Diário</h4>
                         </div>
 
-                        <form name="cad_aluno" action="inserir_matricula.php" method="POST">
+                        <form name="cad_aluno" id="cad_aluno" action="inserir_matricula.php" method="POST">
                             <label class="label-control">Nº Do Diário</label>
                             <select name="ndiario" id="ndiario" type="text" class="form-control col-lg-2">
                                 <option name="ndiario" id="ndiario" value="0">Selecione o Diário</option>
@@ -85,20 +85,16 @@ echo"<option name='ndiario' id='ndiario' value='".$row['sga_diario_ID']."'>".$ro
 $sql = "SELECT sga_Aluno_ID as ID, sga_aluno_Matricula as matricula, sga_aluno_Nome as nome FROM $banco.$tabela_aluno ";
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
-$cont = 0;
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-$cont++;
 echo '
 <tr>
-   <td><input type="checkbox" name="aluno'.$cont.'" value="'.$row['ID'].'"></td> 
+   <td><input type="checkbox" name="aluno[]" id="aluno[]" value="'.$row['ID'].'"></td> 
    <td>'.$row['nome'].'</td>
      <td>'.$row['matricula'].'</td>
 
      </tr>';
 }
-echo '<input style="display:none;" name="controle" value='.$cont.'>';
 ?>
-
                                 </tbody>
                                 <tfoot>
                                     <tr>
