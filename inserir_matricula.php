@@ -8,9 +8,6 @@ $dtmatricula = date('Y-m-d');
 $ndiario = $_POST['ndiario'];
 
 
-
-$PDO = db_connect();
-
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
@@ -19,9 +16,8 @@ if(isset($_POST['aluno']))
 for($i=0; $i <= ((count($_POST['aluno'])-1)); $i++)
 {
 $aluno = $_POST['aluno'][$i];
-echo "$aluno, $i  - <br>";
 
-
+$PDO = db_connect();
 	$sql="INSERT INTO `$banco`.`$tabela_matricula` (`sga_matricula_Aluno`, `sga_matricula_Diario`, `sga_matricula_dtmatricula`) VALUES 
 	(:aluno, :ndiario , :dtmatricula)";
 	

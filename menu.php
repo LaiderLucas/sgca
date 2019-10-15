@@ -26,10 +26,6 @@ protecao();
                         <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> INICIO <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
                                 <li><a href="index.php">PÁGINA INICIAL</a></li>
-                               
-                                
-                                
-                                
                             </ul>
                         </li>
 
@@ -43,7 +39,7 @@ protecao();
                             <li><a href="rel_diarios.php">Diários Cadastrados</a></li>
                             </ul>
 
-                            <li><a class="sidebar-sub-toggle"><i class="ti-bookmark"></i> Turmas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <li><a class="sidebar-sub-toggle"><i class="ti-marker"></i> Turmas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
                             <li><a href="add_turmas.php">Cadastrar Turmas </a></li>
                             <li><a href="rel_turmas.php">Turmas Cadastradas</a></li>
@@ -72,7 +68,7 @@ protecao();
                         <li class="label">NOTAS E PRESENÇAS</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-plus"></i> Notas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="#">Lançar Notas</a></li>
+                                <li><a href="add_notas.php">Lançar Notas</a></li>
                             </ul>
                         </li>
                        
@@ -80,7 +76,7 @@ protecao();
                         <li><a class="sidebar-sub-toggle"><i class="ti-settings"></i> Configurações <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
                                 <li><a href="add_usuarios.php">Cadastrar Usuários</a></li>
-                                <li><a href="invoice-editable.html">Perfil</a></li>
+                                <li><a href="#">Perfil</a></li>
                             </ul>
                         </li>
                         <li><a href="login.php" onclick="apagar()" ><i class="ti-close"></i> Logout</a></li>

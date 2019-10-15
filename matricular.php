@@ -58,7 +58,7 @@ require_once('menu.php');
 
 // efetua a busca no banco de dados
 $PDO = db_connect();
-$sql = "SELECT * FROM sga.sga_diario; ";
+$sql = "SELECT * FROM $banco.$tabela_diario; ";
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
 
@@ -69,7 +69,6 @@ echo"<option name='ndiario' id='ndiario' value='".$row['sga_diario_ID']."'>".$ro
 
 }
 ?>
-
                             </select>
                             <br>
                             <table id="products-table" class="table table-hover table-bordered">

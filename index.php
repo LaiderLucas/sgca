@@ -286,7 +286,7 @@ $tp = $tr / $total_reg;
 */
 
                                             // consulta as aulas
-                                            $sql = "SELECT $tabela_aulas.sga_aulas_ID AS IDaula, $tabela_aulas.sga_aulas_qtdAulas AS qtdaulas, 
+$sql = "SELECT $tabela_aulas.sga_aulas_ID AS IDaula, $tabela_aulas.sga_aulas_qtdAulas AS qtdaulas, 
 $tabela_aulas.sga_aulas_Data AS dataAula, $tabela_aulas.sga_aulas_HoraI AS horaI, $tabela_aulas.sga_aulas_HoraT AS horaT, 
 $tabela_aulas.sga_aulas_Obs AS obs, $tabela_aulas.sga_aulas_Conteudo AS conteudo, $tabela_aulas.sga_aulas_IDTroca AS Troca,
 $tabela_diario.sga_diario_Disciplina AS disciplina, $tabela_diario.sga_diario_Turma AS turma, $tabela_diario.sga_diario_Numero AS diario,
@@ -299,7 +299,7 @@ INNER JOIN $tabela_diario ON $tabela_diario.sga_diario_ID = $tabela_aulas.sga_au
 INNER JOIN $tabela_turma ON sga_turma_ID = $tabela_diario.sga_diario_Turma
 INNER JOIN $tabela_curso ON $tabela_curso.sga_curso_ID = $tabela_turma.sga_turma_Curso
 INNER JOIN $tabela_disciplina ON $tabela_disciplina.sga_disciplina_ID = $tabela_diario.sga_diario_Disciplina
-where sga_aulas_IDUser = $IDU
+where sga_aulas_IDUser = $IDU and sga_aulas_Data >= '2018-31-12'
 ORDER BY dataAula DESC"; //LIMIT $inicio,$total_reg" ;
                                             $stmt = $PDO->prepare($sql);
                                             $stmt->execute();

@@ -90,23 +90,12 @@
 			setTimeout(function(){
 				$("#disciplina").load("carregaDisciplina.php",{id:valor})
 			}, 250);
-            $("#turma").html("<option value='0'>Carregando...</option>");
+        $("#turma").html("<option value='0'>Carregando...</option>");
 			setTimeout(function(){
 				$("#turma").load("carregaTurma.php",{id:valor})
 			}, 250);
     };
     
-
-    function getValor11(valor){
-      var resultado = document.getElementById('dt_aulas');
-       
-      a = $("#dt_aulas").load("carregaHoraAula.php",{id:valor});
-      
-
-      $("#dt_aulas").html(resultado.value = a );
-      
-
-}
 
 
     </script>
