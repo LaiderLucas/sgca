@@ -49,6 +49,7 @@ $tabela_turma = "sga_turma";
 $tabela_usuarios = "sga_usuarios";
 $tabela_log = "sga_logacesso";
 $tabela_bim_sem = "sga_bim_sem";
+$tabela_notas = "sga_notas";
 
 
 

@@ -215,9 +215,6 @@ where sga_aulas_IDUser = $IDU and sga_aulas_ID = $IDA";
                       }
                       ?>
                     </select>
-
-
-                    <!-- <input id='ndiario' name='ndiario' type="number" riquired class="form-control"> -->
                   </div>
                 </div>
                 <!-- Multiple Checkboxes -->

@@ -36,34 +36,61 @@ require_once('menu.php');
                                 <h4>Lançamento de Notas </h4>
                             </div>
                             <form action="" method="POST">
-                                <label class="label-control">Nº Do Diário:&nbsp  </label>
-                                <select name="ndiario" id="ndiario" class="col-sm-2"
-                                    onchange="getValor(this.value, 0)">
+                                <label class="label-control">Nº Do Diário:&nbsp </label>
+                                <select name="ndiario" id="ndiario" class="col-sm-2" onchange="getValor(this.value, 0)">
                                     <option value="0"> Selecione o Nº</option>
                                     <?php
 
 // efetua a busca dos diários no banco de dados
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    $ndiario = $_POST['ndiario'];
+}else{
+    $ndiario = 0;
+}
 $PDO = db_connect();
 $IDU = base64_decode($_COOKIE['SID']);
-$sql = "SELECT * FROM $banco.sga_diario where sga_diario_IDUser = $IDU ; ";
+$sql = "SELECT * FROM $banco.sga_diario where sga_diario_IDUser = $IDU order by sga_diario_ID; ";
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 
-echo"<option value='".$row['sga_diario_ID']."'>".$row['sga_diario_Numero']."</option>";
+echo"<option value='".$row['sga_diario_ID']."'";
+if ($ndiario == $row['sga_diario_ID']) {
+echo "Selected = 'true'";
+}
+echo "> ".$row['sga_diario_Numero']."</option>";
 
 }
 ?>
                                 </select> &nbsp &nbsp &nbsp
-                            
+
                                 <input class="btn btn-large btn-success" type="submit" value="Atualizar" />
                             </form>
                             <br>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <form action="inserir_notas.php" id="cad_notas" name="cad_notas" method="GET">
+                                    <form action="inserir_notas.php" id="cad_notas" name="cad_notas" method="POST">
+                                        <label for="descricao">Descrição: &nbsp </label><input id="descricao"
+                                            name="descricao" type="text" class=""> &nbsp &nbsp
+                                        <label for="peso">Com o Peso: &nbsp </label><input id="peso" name="peso"
+                                            class="">&nbsp &nbsp
+                                        <label for="periodo"> Do Bim/Sem: &nbsp </label><select id="periodo"
+                                            name="periodo" class="">
+                                            <option value="">Selecione</option>
+                                            <option value="1">1º Bimestre</option>
+                                            <option value="2">2º Bimestre</option>
+                                            <option value="3">3º Bimestre</option>
+                                            <option value="4">4º Bimestre</option>
+                                        </select>&nbsp &nbsp
+                                        <label for="tipo">Do Tipo: &nbsp </label><select id="tipo" name="tipo" class="">
+                                            <option value="">Selecione</option>
+                                            <option value="1">Prova</option>
+                                            <option value="2">Trabalho</option>
+                                            <option value="3">Atividade Avaliativa</option>
+                                        </select>&nbsp &nbsp
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
@@ -75,9 +102,11 @@ echo"<option value='".$row['sga_diario_ID']."'>".$row['sga_diario_Numero']."</op
                                             </thead>
                                             <tbody>
                                                 <?php
+
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $ndiario = $_POST['ndiario'];
+    echo '<input style = "display:none;" id="ndiario" name="ndiario" value="'.$ndiario.'">';
     $sql = "SELECT sga_matricula.sga_matricula_ID AS id, sga_aluno.sga_aluno_Matricula AS matricula, sga_aluno.sga_aluno_Nome AS nome, 
     sga_turma.sga_turma_SerieAno AS SerieAno , sga_turma.sga_turma_ano_semestre AS semestre,
     sga_curso.sga_curso_Nome AS curso_Nome, sga_turma.sga_turma_Turno AS turno
@@ -92,7 +121,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo '
     <tr>
-        <td><input id="matricula[]" name="matricula[]" style="background-color:#0000; Border:0;" disabled="disabled" value="'.$row['matricula'].'"></td>
+        <td><input id="matricula[]" name="matricula[]" style="background-color:#0000; Border:0;" value="'.$row['matricula'].'" readonly></td>
         <td>'.$row['nome'].'</td>
         <td>'.$row["SerieAno"] . "º - " . $row['semestre'] . " - " . $row['curso_Nome'] . " - " . $row['turno'] .'</td>
         <td><input style="Border:0;" class="form-control" type="number" name="nota[]" id="nota[]" value="0.00" min="0"  max="10" required></td>
@@ -100,12 +129,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
 ?>
-
-
                                             </tbody>
                                         </table>
                                         <br>
-                                          <button type="submit" class="btn btn-success">Lanças Notas</button>
+                                        <button type="submit" class="btn btn-success">Lanças Notas</button>
                                     </form>
                                 </div>
                             </div>
