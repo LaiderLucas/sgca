@@ -312,15 +312,17 @@ ORDER BY dataAula DESC"; //LIMIT $inicio,$total_reg" ;
                                                     $bimSem = "Bimestre";
                                                 }
                                                 // faz a consulta no banco de dados do periodo do bimestre ou semestre das aulas
-                                                $sql1 = "SELECT sga_bim_sem.sga_bim_sem_NbimSem as Numero, sga_bim_sem.sga_bim_sem_BimOrSem as bimOrSem,
-sga_diario_periodo.sga_Diario_Periodo_NDiario as NDiario
-FROM $banco.sga_bim_sem
-inner join sga_diario_periodo on sga_bim_sem.sga_bim_sem_ID = sga_diario_periodo.sga_Diario_Periodo_IDBim_sem where sga_bim_sem_Inicio <= '$dt_aula' and sga_bim_sem_termino >= '$dt_aula' and sga_bim_sem_BimOrSem = '$bimSem' and sga_Diario_Periodo_NDiario = $IDDiario ;";
+                                                $sql1 = "SELECT sga_bim_sem.sga_bim_sem_NbimSem as Numero, sga_bim_sem.sga_bim_sem_BimOrSem as bimOrSem, sga_diario_periodo.sga_Diario_Periodo_NDiario as NDiario
+                                                FROM $banco.sga_bim_sem
+                                                inner join sga_diario_periodo on sga_bim_sem.sga_bim_sem_ID = sga_diario_periodo.sga_Diario_Periodo_IDBim_sem where sga_bim_sem_Inicio <= '$dt_aula' and sga_bim_sem_termino >= '$dt_aula' and sga_bim_sem_BimOrSem = '$bimSem' and sga_Diario_Periodo_NDiario = $IDDiario ;";
                                                 $stmt5 = $PDO->prepare($sql1);
                                                 $stmt5->execute();
                                                 $row2 = $stmt5->fetch(PDO::FETCH_ASSOC);
-
-                                                $N = $row2['Numero'];
+                                                if($bimSem == "Semestre"){
+                                                    $N = $row['ano'];
+                                                }else{   
+                                                    $N = $row2['Numero'];
+                                                    }
                                                 $BoS = $row2['bimOrSem'];
 
                                                 $data = date('d/m/Y', strtotime($row['dataAula'])); // converte a data para o formato brasileiro DD/MM/AAAA
