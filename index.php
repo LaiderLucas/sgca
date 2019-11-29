@@ -238,7 +238,7 @@ $cifra = criptoCesar($_COOKIE['SID'], +3);
 
                                                 </tr>
                                                 <tr>
-                                                    <th><input type="number" class="form-control input-sm" id="numero">
+                                                    <th><input type="text" class="form-control input-sm" id="numero">
                                                     </th>
                                                     <th><input type="number" class="form-control input-sm" id="ndiario">
                                                     </th>
