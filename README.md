@@ -37,9 +37,3 @@ Por Favor Leia [CONTRIBUTING.md](https://gist.github.com/LaiderLucas/e62f8f37934
 ## Autor
 
 * **Laider Lucas**
-
-## License
-
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
-
-
