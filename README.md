@@ -4,7 +4,7 @@ Sistema desenvolvido para facilitar e controlar aulas
 
 ## Iniciando
 
-Esse Projeto visa a auxiliar professores a ter um maior controle e funcionalidades para poder gerir e controlar suas aulas
+Esse projeto visa auxiliar professores a ter um maior controle e funcionalidades para poder gerir e controlar suas aulas
 
 ### Pré Requisitos
 
