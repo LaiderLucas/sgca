@@ -30,7 +30,7 @@
                         </div>
                         <div class="login-form">
                             <h4>LOGIN</h4>
-                            <form action="valida.php" method="POST">
+                            <form action="core/valida.php" method="POST">
                                 <div class="form-group">
                                     <label>Email</label>
                                     <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Email">

@@ -57,7 +57,7 @@
 <body>
     <?php
 
-    require_once('menu.php');
+    require_once('core/menu.php');
 
     ?>
 
@@ -134,13 +134,6 @@
 
                                 <?php
 
-
-                                /*
-print criptoCesar($_COOKIE['SID'], +3); // Cifrando
-$cifra = criptoCesar($_COOKIE['SID'], +3);
-                         
- print criptoCesar($cifra, -3); // Decifrando
-*/
                                 $IDU = base64_decode($_COOKIE['SID']);
                                 $PDO = db_connect();
                                 $query0 = "SELECT $tabela_trocas.sga_trocas_IDTroca as ID, $tabela_turma.sga_turma_SerieAno AS ano, $tabela_turma.sga_turma_ano_semestre AS ano_semestre, $tabela_curso.sga_curso_Nome AS nomeCurso, 
@@ -266,24 +259,7 @@ $cifra = criptoCesar($_COOKIE['SID'], +3);
                                             $ID = 0;
                                             $PDO = db_connect();
                                             $IDU = base64_decode($_COOKIE['SID']);
-                                            /* paginação
-$sql4 = "SELECT count(*) as qtd FROM $banco.$tabela_aulas where sga_aulas_IDUser = $IDU;";
-$stmt4 = $PDO->prepare($sql4);
-$stmt4->execute();
-$result = $stmt4->fetch(PDO::FETCH_ASSOC);
-$tr = $result["qtd"];
-$total_reg = "20";
-@$pagina=$_GET['pagina'];
-if (!$pagina) {
-$pc = "1";
-} else {
-$pc = $pagina;
-}
-$inicio = $pc - 1;
-$inicio = $inicio * $total_reg;
- // verifica o número total de registros
-$tp = $tr / $total_reg;
-*/
+
 
                                             // consulta as aulas
 $sql = "SELECT $tabela_aulas.sga_aulas_ID AS IDaula, $tabela_aulas.sga_aulas_qtdAulas AS qtdaulas, 
@@ -346,7 +322,7 @@ ORDER BY dataAula DESC"; //LIMIT $inicio,$total_reg" ;
                                                         <td>" . $data . "</td>
                                                         <td>" . $row['horaI'] . " às " . $row['horaT'] . "</td>
                                                         <td>" . $row['qtdaulas'] . "</td>
-                                                        <form action='alterar_aula.php' method='POST'>
+                                                        <form action='editar/editar_aula.php' method='POST'>
                                                         <td>
                                                         
                                                         <span class='btn btn-" . $btn . " btn-rounded'>" . $tipo . "</span>
@@ -522,7 +498,7 @@ ORDER BY dataAula DESC"; //LIMIT $inicio,$total_reg" ;
                     }
 
 
-                    include('footer.php');
+                    include('core/footer.php');
                     ?>
 
 
