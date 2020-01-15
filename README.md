@@ -17,7 +17,7 @@ Bootstrap
 
 ### Instalação
 
-Os passos de instalção são os seguintes
+Os passos de instalção são os seguintes:
 
 Instalar um servidor com os serviços abaixo
 
@@ -29,10 +29,11 @@ PHP
 
 Depois é so adicionar os arquivos dentro do repositório www do apache.
 
+O Banco de Dados será disponibilizado na pasta db 
 
 ## Contribuição
 
-Por Favor Leia [CONTRIBUTING.md](https://gist.github.com/LaiderLucas/e62f8f379344fb7edc41d1c00c858e2a) para obter detalhes sobre nosso código de conduta e o processo de envio de solicitações pull para nós.
+Para Contribuir com ideia ou sugestões de Melhorias é só adicionar um pull resquest que entrarei em contato e trocamos uma ideia sobre a solicitação, desde já Obrigado!
 
 ## Autor
 
