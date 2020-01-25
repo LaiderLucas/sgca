@@ -23,17 +23,17 @@
         <link rel="apple-touch-icon" sizes="57x57" href="">
 
         <!-- Styles -->
-        <link href="../assets/css/lib/weather-icons.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="../assets/css/lib/themify-icons.css" rel="stylesheet">
-        <link href="../assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-        <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
 
-        <link href="../assets/css/lib/helper.css" rel="stylesheet">
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <script type="text/javascript" src="../Scripts/jQuery.js"></script>
+        <link href="assets/css/lib/helper.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="Scripts/jQuery.js"></script>
 <style>
 
 .col-sm-0{-ms-flex:0 0 10%;flex:0 0 10%;max-width:10%;
@@ -88,11 +88,11 @@
 
 			$("#disciplina").html("<option value='0'>Carregando...</option>");
 			setTimeout(function(){
-				$("#disciplina").load("../core/carregaDisciplina.php",{id:valor})
+				$("#disciplina").load("core/carregaDisciplina.php",{id:valor})
 			}, 250);
         $("#turma").html("<option value='0'>Carregando...</option>");
 			setTimeout(function(){
-				$("#turma").load("../core/carregaTurma.php",{id:valor})
+				$("#turma").load("core/carregaTurma.php",{id:valor})
 			}, 250);
     };
     
@@ -104,8 +104,8 @@
 
     <body>
 <?php
-include('../core/config.php');
-require_once('../core/menu.php');
+require_once('core/config.php');
+require_once('core/menu.php');
 @$alert = $_SESSION['sucessoA'];
 @$msg = $_SESSION['avisoA'];
 
@@ -120,7 +120,7 @@ require_once('../core/menu.php');
                                     <h4>Lançamento de Aulas</h4>
                                    
                                 </div>
-                                <form name="lancaAula" action="../inserir/inserir_aula.php" method="post">
+                                <form name="lancaAula" action="inserir/inserir_aula.php" method="post">
         <fieldset>
 <div class="form-group">
 <br>
@@ -299,7 +299,7 @@ echo"<option value='".$row['sga_diario_ID']."'>".$row['sga_diario_Numero']."</op
 
     <!-- Rodepé -->
 <?php
-include('../core/footer.php');
+include('core/footer.php');
 ?>
 <!-- Fim --> 
 
@@ -312,34 +312,34 @@ include('../core/footer.php');
         
 
         <!-- jquery vendor -->
-        <script src="../assets/js/lib/jquery.min.js"></script>
-        <script src="../assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->
-        <script src="../assets/js/lib/menubar/sidebar.js"></script>
-        <script src="../assets/js/lib/preloader/pace.min.js"></script>
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
-        <script src="../assets/js/lib/bootstrap.min.js"></script>
+        <script src="assets/js/lib/bootstrap.min.js"></script>
 
         <!-- bootstrap -->
 
-        <script src="../assets/js/lib/circle-progress/circle-progress.min.js"></script>
-        <script src="../assets/js/lib/circle-progress/circle-progress-init.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
 
-        <script src="../assets/js/lib/morris-chart/raphael-min.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris-init.js"></script>
+        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+        <script src="assets/js/lib/morris-chart/morris.js"></script>
+        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
 
         <!--  flot-chart js -->
-        <script src="../assets/js/lib/flot-chart/jquery.flot.js"></script>
-        <script src="../assets/js/lib/flot-chart/jquery.flot.resize.js"></script>
-        <script src="../assets/js/lib/flot-chart/flot-chart-init.js"></script>
+        <script src="assets/js/lib/flot-chart/jquery.flot.js"></script>
+        <script src="assets/js/lib/flot-chart/jquery.flot.resize.js"></script>
+        <script src="assets/js/lib/flot-chart/flot-chart-init.js"></script>
         <!-- // flot-chart js -->
 
-        <script src="../assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-        <script src="../assets/js/lib/weather/weather-init.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-        <script src="../assets/js/scripts.js"></script>
+        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+        <script src="assets/js/lib/weather/weather-init.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
         <!-- scripit init-->
 
     </body>

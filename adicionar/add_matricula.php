@@ -22,24 +22,24 @@
     <link rel="apple-touch-icon" sizes="57x57" href="">
 
     <!-- Styles -->
-    <link href="../assets/css/lib/weather-icons.css" rel="stylesheet" />
-    <link href="../assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-    <link href="../assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="../assets/css/lib/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="../assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-    <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/lib/helper.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="../Scripts/jQuery.js"></script>
-    <script type="text/javascript" src="../Scripts/FuncaoMatricular.js"></script>
+    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="Scripts/jQuery.js"></script>
+    <script type="text/javascript" src="Scripts/FuncaoMatricular.js"></script>
 
 
 </head>
 
 <body>
     <?php
-require_once('../core/menu.php');
+require_once('core/menu.php');
 ?>
     <div class="content-wrap">
         <div class="main">
@@ -50,7 +50,7 @@ require_once('../core/menu.php');
                             <h4>Cadastro de Alunos No Diário</h4>
                         </div>
 
-                        <form name="cad_aluno" id="cad_aluno" action="../inserir/inserir_matricula.php" method="POST">
+                        <form name="cad_aluno" id="cad_aluno" action="inserir/inserir_matricula.php" method="POST">
                             <label class="label-control">Nº Do Diário</label>
                             <select name="ndiario" id="ndiario" type="text" class="form-control col-lg-2">
                                 <option name="ndiario" id="ndiario" value="0">Selecione o Diário</option>
@@ -124,30 +124,30 @@ echo '
         </div>
     </div>
     <!-- jquery vendor -->
-    <script src="../assets/js/lib/jquery.min.js"></script>
-    <script src="../assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
     <!-- nano scroller -->
-    <script src="../assets/js/lib/menubar/sidebar.js"></script>
-    <script src="../assets/js/lib/preloader/pace.min.js"></script>
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
     <!-- sidebar -->
-    <script src="../assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>
 
     <!-- bootstrap -->
 
-    <script src="../assets/js/lib/circle-progress/circle-progress.min.js"></script>
-    <script src="../assets/js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
 
-    <script src="../assets/js/lib/morris-chart/raphael-min.js"></script>
-    <script src="../assets/js/lib/morris-chart/morris.js"></script>
-    <script src="../assets/js/lib/morris-chart/morris-init.js"></script>
+    <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+    <script src="assets/js/lib/morris-chart/morris.js"></script>
+    <script src="assets/js/lib/morris-chart/morris-init.js"></script>
 
 
 
-    <script src="../assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-    <script src="../assets/js/lib/weather/weather-init.js"></script>
-    <script src="../assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-    <script src="../assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-    <script src="../assets/js/scripts.js"></script>
+    <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/lib/weather/weather-init.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <!-- scripit init-->
 </body>
 

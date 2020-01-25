@@ -10,20 +10,20 @@
 
 
     <!-- Styles -->
-    <link href="../assets/css/lib/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="../assets/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet" />
-    <link href="../assets/css/lib/jsgrid/jsgrid.min.css" type="text/css" rel="stylesheet" />
-    <link href="../assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-    <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/lib/helper.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/jsgrid/jsgrid.min.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <?php
-include('../core/config.php');
-require_once('../core/menu.php');
+include('core/config.php');
+require_once('core/menu.php');
 ?>
     <div class="content-wrap">
         <div class="main">
@@ -72,7 +72,7 @@ echo "> ".$row['sga_diario_Numero']."</option>";
                             <br>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <form action="../inserir/inserir_notas.php" id="cad_notas" name="cad_notas" method="POST">
+                                    <form action="inserir/inserir_notas.php" id="cad_notas" name="cad_notas" method="POST">
                                         <label for="descricao">Descrição: &nbsp </label><input id="descricao"
                                             name="descricao" type="text" class=""> &nbsp &nbsp
                                         <label for="peso">Com o Peso: &nbsp </label><input id="peso" name="peso"
@@ -159,15 +159,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
     </div>
     <!-- jquery vendor -->
-    <script src="../assets/js/lib/jquery.min.js"></script>
-    <script src="../assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
     <!-- nano scroller -->
-    <script src="../assets/js/lib/menubar/sidebar.js"></script>
-    <script src="../assets/js/lib/preloader/pace.min.js"></script>
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
     <!-- sidebar -->
 
     <!-- bootstrap -->
-    <script src="../assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <!-- scripit init-->
 </body>
 

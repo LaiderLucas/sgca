@@ -22,23 +22,23 @@
         <link rel="apple-touch-icon" sizes="57x57" href="">
 
         <!-- Styles -->
-        <link href="../assets/css/lib/weather-icons.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="../assets/css/lib/themify-icons.css" rel="stylesheet">
-        <link href="../assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-        <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet">
-        <link href="../assets/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet">
-        <link href="../assets/css/lib/jsgrid/jsgrid.min.css" type="text/css" rel="stylesheet">
-        <link href="../assets/css/lib/helper.css" rel="stylesheet">
-        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet">
+        <link href="assets/css/lib/jsgrid/jsgrid.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/lib/helper.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
     </head>
 
     <body>
 <?php
-include('../core/config.php');
-require_once('../core/menu.php');
+include('core/config.php');
+require_once('core/menu.php');
 ?>
     
         <div class="content-wrap">
@@ -52,7 +52,7 @@ require_once('../core/menu.php');
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                    <form id="lanca_presenca" action="../inserir/inserir_presenca.php" method="GET">
+                                    <form id="lanca_presenca" action="inserir/inserir_presenca.php" method="GET">
                                         <table class="jsgrid-table">
                                             <thead>
                                                 <tr class ="jsgrid-header-row">
@@ -116,46 +116,46 @@ echo '<input name="controle" id="controle" value='.$controle.' style="display:no
         
 
         <!-- jquery vendor -->
-        <script src="../assets/js/lib/jquery.min.js"></script>
-        <script src="../assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->
-        <script src="../assets/js/lib/menubar/sidebar.js"></script>
-        <script src="../assets/js/lib/preloader/pace.min.js"></script>
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
-        <script src="../assets/js/lib/bootstrap.min.js"></script>
+        <script src="assets/js/lib/bootstrap.min.js"></script>
 
         <!-- bootstrap -->
 
-        <script src="../assets/js/lib/circle-progress/circle-progress.min.js"></script>
-        <script src="../assets/js/lib/circle-progress/circle-progress-init.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
 
-        <script src="../assets/js/lib/morris-chart/raphael-min.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris-init.js"></script>
+        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+        <script src="assets/js/lib/morris-chart/morris.js"></script>
+        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
 
         
 
-        <script src="../assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-        <script src="../assets/js/lib/weather/weather-init.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-        <script src="../assets/js/scripts.js"></script>
+        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+        <script src="assets/js/lib/weather/weather-init.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
         <!-- scripit init-->
 
 
         <!-- JS Grid Scripts Start-->
-    <script src="../assets/js/lib/jsgrid/db.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid.core.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid.load-indicator.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid.load-strategies.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid.sort-strategies.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid.field.js"></script>
-    <script src="../assets/js/lib/jsgrid/fields/jsgrid.field.text.js"></script>
-    <script src="../assets/js/lib/jsgrid/fields/jsgrid.field.number.js"></script>
-    <script src="../assets/js/lib/jsgrid/fields/jsgrid.field.select.js"></script>
-    <script src="../assets/js/lib/jsgrid/fields/jsgrid.field.checkbox.js"></script>
-    <script src="../assets/js/lib/jsgrid/fields/jsgrid.field.control.js"></script>
-    <script src="../assets/js/lib/jsgrid/jsgrid-init.js"></script>
+    <script src="assets/js/lib/jsgrid/db.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid.core.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid.load-indicator.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid.load-strategies.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid.sort-strategies.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid.field.js"></script>
+    <script src="assets/js/lib/jsgrid/fields/jsgrid.field.text.js"></script>
+    <script src="assets/js/lib/jsgrid/fields/jsgrid.field.number.js"></script>
+    <script src="assets/js/lib/jsgrid/fields/jsgrid.field.select.js"></script>
+    <script src="assets/js/lib/jsgrid/fields/jsgrid.field.checkbox.js"></script>
+    <script src="assets/js/lib/jsgrid/fields/jsgrid.field.control.js"></script>
+    <script src="assets/js/lib/jsgrid/jsgrid-init.js"></script>
     <!-- JS Grid Scripts End-->
 
     </body>

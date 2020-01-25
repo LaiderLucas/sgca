@@ -22,22 +22,22 @@
         <link rel="apple-touch-icon" sizes="57x57" href="">
 
         <!-- Styles -->
-        <link href="../assets/css/lib/weather-icons.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="../assets/css/lib/font-awesome.min.css" rel="stylesheet">
-        <link href="../assets/css/lib/themify-icons.css" rel="stylesheet">
-        <link href="../assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-        <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
 
-        <link href="../assets/css/lib/helper.css" rel="stylesheet">
-        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/lib/helper.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
     </head>
 
     <body>
 <?php
-include('../core/config.php');
-require_once('../core/menu.php');
+include('core/config.php');
+require_once('core/menu.php');
 ?>
  <div class="content-wrap">
             <div class="main">
@@ -48,13 +48,13 @@ require_once('../core/menu.php');
                                     <h4>Cadastro de Turmas</h4>
                                     
                                 </div>
-                                <form name="cad_turma" action="../inserir/inserir_turma.php" method="post">
+                                <form name="cad_turma" action="inserir/inserir_turma.php" method="GET">
         <fieldset>
           <!-- Text input-->
           <div class="form-group">
 <label class="col-sm-2 control-label">Ano/Semestre</label>
 <div class="col-sm-10">
-  <input name="serie_ano" id="serie_ano"  class="col-sm-1" type="number" required placeholder = "1"> &nbsp;&nbsp;&nbsp;
+  <input name="serie_ano" id="serie_ano"  class="col-sm-1" type="number" min=1 max=15 required placeholder = "1"> &nbsp;&nbsp;&nbsp;
   <input type="radio" id="ano_semestre" name="ano_semestre" Value = "Ano" > Ano &nbsp;&nbsp;&nbsp;
   <input type="radio" id="ano_semestre" name="ano_semestre" value = "Semestre" > Semestre 
     </div>
@@ -73,7 +73,7 @@ require_once('../core/menu.php');
 <div class="form-group">
             <label class="control-label" for="ano_inicio">Ano de Inicio</label>
             <div class="col-sm-10">
-            <input class="col-sm-2" type="number" id="ano_inicio" name="ano_inicio" required placeholder="2019" > 
+            <input class="col-sm-2" type="number" id="ano_inicio" name="ano_inicio" min=2019 required placeholder="2019" > 
 </div> 
 </div>
 
@@ -114,7 +114,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         </fieldset>
          <div class="form-group">
             <div>
-              <button class="btn btn-success btn-large m-b-10 m-l-5">Cadastrar Turma</button>
+            <button class="btn btn-success btn-large m-b-10 m-l-5" type="submit">Cadastrar Turma</button>
                <button  class="btn btn-danger btn-large m-b-10 m-l-5" onClick="JavaScript: window.history.back();" >Voltar</button>
             </div>
         </div>
@@ -136,30 +136,30 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                         </div>
 
   <!-- jquery vendor -->
-  <script src="../assets/js/lib/jquery.min.js"></script>
-        <script src="../assets/js/lib/jquery.nanoscroller.min.js"></script>
+  <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
         <!-- nano scroller -->
-        <script src="../assets/js/lib/menubar/sidebar.js"></script>
-        <script src="../assets/js/lib/preloader/pace.min.js"></script>
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
         <!-- sidebar -->
-        <script src="../assets/js/lib/bootstrap.min.js"></script>
+        <script src="assets/js/lib/bootstrap.min.js"></script>
 
         <!-- bootstrap -->
 
-        <script src="../assets/js/lib/circle-progress/circle-progress.min.js"></script>
-        <script src="../assets/js/lib/circle-progress/circle-progress-init.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
 
-        <script src="../assets/js/lib/morris-chart/raphael-min.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris.js"></script>
-        <script src="../assets/js/lib/morris-chart/morris-init.js"></script>
+        <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+        <script src="assets/js/lib/morris-chart/morris.js"></script>
+        <script src="assets/js/lib/morris-chart/morris-init.js"></script>
 
         
 
-        <script src="../assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
-        <script src="../assets/js/lib/weather/weather-init.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-        <script src="../assets/js/scripts.js"></script>
+        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+        <script src="assets/js/lib/weather/weather-init.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
         <!-- scripit init-->                       
 
 </div>

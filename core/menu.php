@@ -11,73 +11,73 @@ for (var i = 0; i < cookieI.length; i++)
 	cookieData += "=;expires=" + expire.toGMTString();
 	document.cookie = cookieData; 
 }
-location.href="../login.php";
+location.href="login.php";
 }
  
 </script>
 <?php
 include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
-//protecao(); 
+protecao(); 
 ?>
         <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
             <div class="nano">
                 <div class="nano-content">
-                    <div class="logo"><a href="../index.php"><span>SISTEMA DE GESTÃO E CONTROLE DE AULAS</span></a></div>
+                    <div class="logo"><a href="index.php"><span>SISTEMA DE GESTÃO E CONTROLE DE AULAS</span></a></div>
                     <ul>
                         <li class="label">MENU</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> INICIO <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="../index.php">PÁGINA INICIAL</a></li>
+                                <li><a href="index.php">PÁGINA INICIAL</a></li>
                             </ul>
                         </li>
 
                         <li class="label">LANÇAMENTO DE AULAS</li>
-                        <li><a href="../adicionar/add_aulas.php"><i class="ti-pencil-alt"></i> Lançar Aulas</a></li>
+                        <li><a href="pages.php?id=add_aulas"><i class="ti-pencil-alt"></i> Lançar Aulas</a></li>
 
                         <li class="label">CADASTROS E CONSULTAS</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-book"></i> Diários <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="../adicionar/add_diarios.php">Cadastrar Diários </a></li>
-                            <li><a href="../relatorio/rel_diarios.php">Diários Cadastrados</a></li>
+                            <li><a href="pages.php?id=add_diarios">Cadastrar Diários </a></li>
+                            <li><a href="pages.php?id=rel_diarios">Diários Cadastrados</a></li>
                             </ul>
 
                             <li><a class="sidebar-sub-toggle"><i class="ti-marker"></i> Turmas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="../adicionar/add_turmas.php">Cadastrar Turmas </a></li>
-                            <li><a href="../relatorio/rel_turmas.php">Turmas Cadastradas</a></li>
+                            <li><a href="add.php?id=add_turmas">Cadastrar Turmas </a></li>
+                            <li><a href="pages.php?id=rel_turmas">Turmas Cadastradas</a></li>
                             </ul>
 
                             <li><a class="sidebar-sub-toggle"><i class="ti-bookmark-alt"></i> Cursos <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="../adicionar/add_cursos.php">Cadastrar Cursos </a></li>
-                            <li><a href="../relatorio/rel_cursos.php">Cursos Cadastrados</a></li>
+                            <li><a href="pages.php?id=add_cursos">Cadastrar Cursos </a></li>
+                            <li><a href="pages.php?id=rel_cursos">Cursos Cadastrados</a></li>
                             </ul>
 
                             <li><a class="sidebar-sub-toggle"><i class="ti-bookmark"></i> Disciplinas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="../adicionar/add_disciplinas.php">Cadastrar Disciplinas </a></li>
-                            <li><a href="../relatorio/rel_disciplinas.php">Disciplinas Cadastradas</a></li>
+                            <li><a href="pages.php?id=add_disciplinas">Cadastrar Disciplinas </a></li>
+                            <li><a href="pages.php?id=rel_disciplinas">Disciplinas Cadastradas</a></li>
                             </ul>
 
 
                             <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> Alunos <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                            <li><a href="../adicionar/add_alunos.php">Cadastrar Alunos </a></li>
-                            <li><a href="../relatorio/rel_alunos.php">Alunos Cadastrados</a></li>
+                            <li><a href="pages.php?id=add_alunos">Cadastrar Alunos </a></li>
+                            <li><a href="pages.php?id=rel_alunos">Alunos Cadastrados</a></li>
                             </ul>
-                            <li><a href="../adicionar/add_matricula.php"><i class="ti-check-box"></i> Matricular Alunos No Diário</a>
+                            <li><a href="pages.php?id=add_matricula"><i class="ti-check-box"></i> Matricular Alunos No Diário</a>
                         
                         <li class="label">NOTAS E PRESENÇAS</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-plus"></i> Notas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="../adicionar/add_notas.php">Lançar Notas</a></li>
+                                <li><a href="pages.php?id=add_notas">Lançar Notas</a></li>
                             </ul>
                         </li>
                        
                         <li class="label">CONFIGURAÇÕES DO SISTEMA</li>
                         <li><a class="sidebar-sub-toggle"><i class="ti-settings"></i> Configurações <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                             <ul>
-                                <li><a href="../adicionar/add_usuarios.php">Cadastrar Usuários</a></li>
+                                <li><a href="pages.php?id=add_usuarios">Cadastrar Usuários</a></li>
                                 <li><a href="#">Perfil</a></li>
                             </ul>
                         </li>
