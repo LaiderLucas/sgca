@@ -125,7 +125,6 @@
     })
 
     $(window).bind("resize", function() {
-        console.log($(this).width())
         if ($(this).width() < 680) {
             $('.logo').addClass('hidden')
             $('.sidebar').removeClass('sidebar-shrink')
@@ -155,18 +154,5 @@
                 event.preventDefault();
                 return false;
             })
-
-    
-
-    /*  pace Loader
-    -------------*/
-
-    paceOptions = {
-        elements: true
-    };
-
-
-
-
 })
 (jQuery);

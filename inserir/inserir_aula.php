@@ -1,4 +1,5 @@
 <?php
+
 include('../core/config.php');
 include("../core/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protecao(); 
@@ -322,5 +323,7 @@ $numeroDiario = $row2['numeroDiario'];
 
 
 // volta para a pagina de cadastro de aulas
-header('Location:../adicionar/add_aulas.php');
 ?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>

@@ -34,7 +34,7 @@ define('DB_PASS', '');
 define('DB_NAME', 'sga');
 
 // Definindo banco e tabelas
-$base_teste = false;
+$base_teste = true;
 $banco = "sga";
 $tabela_aulas = "sga_aulas";
 $tabela_aluno = "sga_aluno";
@@ -73,6 +73,6 @@ function db_connect()
 if ($base_teste == true) {
 
     echo "
-    <h2 style='color:red; text-align: center;'>BASE DE DADOS TESTE</h2> 
+    <h2 style='color:red; text-align: center;'>BASE DE DADOS TESTE </h2> 
     ";
 }

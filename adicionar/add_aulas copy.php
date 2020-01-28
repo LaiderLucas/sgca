@@ -61,7 +61,7 @@ function getValor(valor) {
 </head>
 
 <body>
-<?php
+    <?php
 require_once('core/menu.php');
 ?>
     <div class="content-wrap">
