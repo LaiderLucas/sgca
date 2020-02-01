@@ -49,7 +49,7 @@ Edição de Aulas
 Geração de Plano de Aula (Doc)
 Lista das aulas
 Classificação por Bimestre/Semestre
-Filtros por Bimestre/Semestre, Nº Diario, Turma, Disciplina	Data, Horario, Nº Aulas
+Filtros por Bimestre/Semestre, Nº Diario, Turma, Disciplina, Data, Horario, Nº Aulas
 ```
 
 #### Login
