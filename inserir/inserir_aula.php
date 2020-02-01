@@ -122,12 +122,14 @@ if ($imp_planoAula == 1){
 $query2 = "SELECT  $tabela_turma.sga_turma_SerieAno AS ano,$tabela_turma.sga_turma_ano_semestre AS ano_semestre,
 $tabela_curso.sga_curso_Nome AS nomeCurso, sga_turma_Turno AS turno,
 $tabela_disciplina.sga_disciplina_Nome AS nomeDisciplina,
-$tabela_diario.sga_diario_Numero as numeroDiario
+$tabela_diario.sga_diario_Numero as numeroDiario,
+$tabela_usuarios.sga_usuarios_Nome as nomeUsuario
 FROM $tabela_aulas
 INNER JOIN $tabela_diario ON $tabela_diario.sga_diario_ID = $ndiario
 INNER JOIN $tabela_turma ON sga_turma_ID = $tabela_diario.sga_diario_Turma
 INNER JOIN $tabela_curso ON $tabela_curso.sga_curso_ID = $tabela_turma.sga_turma_Curso
 INNER JOIN $tabela_disciplina ON $tabela_disciplina.sga_disciplina_ID = $tabela_diario.sga_diario_Disciplina
+INNER JOIN $tabela_usuarios ON $tabela_usuarios.sga_usuarios_ID = $tabela_turma.sga_turma_IDUser
 limit 1;
 ";
 $stmt = $PDO->prepare($query2);
@@ -140,175 +142,174 @@ $nomeCurso = $row2['nomeCurso'];
 $turno = $row2['turno'];
 $nomeDisciplina = $row2['nomeDisciplina'];
 $numeroDiario = $row2['numeroDiario'];
+$nomeUsuario = $row2['nomeUsuario'];
+
+$doc_body ="<html xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'
+xmlns:w='urn:schemas-microsoft-com:office:word' xmlns:m='http://schemas.microsoft.com/office/2004/12/omml'
+xmlns='http://www.w3.org/TR/REC-html40'>
+
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=UTF-8'>
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content='Microsoft Word 15'>
+<meta name=Originator content='Microsoft Word 15'>
+<link rel=File-List href='12-02_arquivos/filelist.xml'>
+<link rel=themeData href='12-02_arquivos/themedata.thmx'>
+<link rel=colorSchemeMapping href='12-02_arquivos/colorschememapping.xml'>
+
+</head>
+
+<body bgcolor=white lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=WordSection1>
+
+    <p class=MsoNormal align=center style='text-align:center'><b><span style='font-size:12.0pt;font-family:'
+                Arial',sans-serif'>PLANO DE AULA</span></b></p>
 
 
- $doc_body ="
- <html xmlns:v='urn:schemas-microsoft-com:vml'
- xmlns:o='urn:schemas-microsoft-com:office:office'
- xmlns:w='urn:schemas-microsoft-com:office:word'
- xmlns:m='http://schemas.microsoft.com/office/2004/12/omml'
- xmlns='http://www.w3.org/TR/REC-html40'>
- 
- <head>
- <meta http-equiv=Content-Type content='text/html; charset=UTF-8'>
- <meta name=ProgId content=Word.Document>
- <meta name=Generator content='Microsoft Word 15'>
- <meta name=Originator content='Microsoft Word 15'>
- <link rel=File-List href='12-02_arquivos/filelist.xml'>
- <link rel=themeData href='12-02_arquivos/themedata.thmx'>
- <link rel=colorSchemeMapping href='12-02_arquivos/colorschememapping.xml'>
 
- </head>
- 
- <body bgcolor=white lang=PT-BR style='tab-interval:35.4pt'>
- 
- <div class=WordSection1>
- 
- <p class=MsoNormal align=center style='text-align:center'><b><span
- style='font-size:12.0pt;font-family:'Arial',sans-serif'>PLANO DE AULA</span></b></p>
- 
- 
- 
- <div align=center>
- 
- <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
-  style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
-  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;page-break-inside:avoid;
-   height:19.3pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;background:#D9D9D9;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.3pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;layout-grid-mode:char'><b><span style='font-size:12.0pt;
-   font-family:'Arial',sans-serif'>IDENTIFICA&Ccedil;&Atilde;O</span></b></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:1;page-break-inside:avoid;height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>Professor: </span></b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>LAIDER LUCAS COMIN
-   VIEIRA</span></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:2;page-break-inside:avoid;height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><span
-   class=SpellE><b><span style='font-size:12.0pt;font-family:'Arial',sans-serif'>Qtd</span></b></span><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>. Aulas: </span></b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>".$qtd_aulas."</span></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:3;page-break-inside:avoid;height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>Data:</span></b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'> ".$dt_aulas." - ( ".$inicio_aula." às ".$termino_aula.")</span></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:4;page-break-inside:avoid;height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>Turma:</span></b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'> ".$ano."º ".$ano_semestre." - ".$nomeCurso." - ".$turno." - ".$numeroDiario."</span></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:5;page-break-inside:avoid;height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>Disciplina:</span></b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'> ".$nomeDisciplina." </span></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;page-break-inside:avoid;
-   height:19.9pt'>
-   <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
-   padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
-   <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-   3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span
-   style='font-size:12.0pt;font-family:'Arial',sans-serif'>OBS: ".$obs." ".$obsTroca."</span></b></p>
-   </td>
-  </tr>
- </table>
- 
- </div>
- 
- <br>
+    <div align=center>
 
- 
- <div align=center>
- 
- <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
-  style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
-  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-   <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
-   background:#CCCCCC;padding:0cm 5.4pt 0cm 5.4pt'>
-   <p class=MsoNormal style='layout-grid-mode:char'><b><span style='font-size:
-   12.0pt;font-family:'Arial',sans-serif'>CONTE&Uacute;DO</span></b></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:42.9pt'>
-   <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
-   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:42.9pt'>
-   <ul style='margin-top:0cm' type=disc>
-    <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;
-        layout-grid-mode:char'><span style='font-size:12.0pt;font-family:'Arial',sans-serif;
-        mso-fareast-font-family:'Times New Roman''>".$cont_min."</span><span style='mso-fareast-font-family:'Times New Roman''><o:p></o:p></span></li>
-   
-   </ul>
-   <p class=MsoNormal style='margin-left:18.0pt;layout-grid-mode:char'>&nbsp;</p>
-   </td>
-  </tr>
- </table>
- 
- </div>
- 
-<br>
- 
- <div align=center>
- 
- <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
-  style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
-  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-   <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
-   background:#CCCCCC;padding:0cm 5.4pt 0cm 5.4pt'>
-   <p class=MsoNormal style='layout-grid-mode:char'><b><span style='font-size:
-   12.0pt;font-family:'Arial',sans-serif'>ATIVIDADES</span></b></p>
-   </td>
-  </tr>
-  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:36.7pt'>
-   <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
-   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:36.7pt'>
-   <p class=MsoNormal style='layout-grid-mode:char'><span style='font-size:12.0pt;
-   font-family:'Arial',sans-serif'>&nbsp;</span></p>
-   <p class=MsoNormal style='layout-grid-mode:char'><span style='font-size:12.0pt;
-   font-family:'Arial',sans-serif'></span></p>
-   </td>
-  </tr>
- </table>
- 
- </div>
- 
- <p class=MsoNormal>&nbsp;</p>
- 
- <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
- 
- </div>
- 
- </body>
- 
- </html>
- 
- ";
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+            style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;page-break-inside:avoid;
+height:19.3pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;background:#D9D9D9;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.3pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;layout-grid-mode:char'><b><span style='font-size:12.0pt;
+font-family:' Arial',sans-serif'>IDENTIFICA&Ccedil;&Atilde;O</span></b></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1;page-break-inside:avoid;height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span style='font-size:12.0pt;font-family:'
+                                Arial',sans-serif'>Professor: </span></b><span style='font-size:12.0pt;font-family:'
+                            Arial',sans-serif'>".$nomeUsuario."</span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:2;page-break-inside:avoid;height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><span class=SpellE><b><span
+                                    style='font-size:12.0pt;font-family:'
+                                    Arial',sans-serif'>Qtd</span></b></span><b><span
+                                style='font-size:12.0pt;font-family:' Arial',sans-serif'>. Aulas: </span></b><span
+                            style='font-size:12.0pt;font-family:' Arial',sans-serif'>".$qtd_aulas."</span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:3;page-break-inside:avoid;height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span style='font-size:12.0pt;font-family:'
+                                Arial',sans-serif'>Data:</span></b><span style='font-size:12.0pt;font-family:'
+                            Arial',sans-serif'> ".$dt_aulas." - ( ".$inicio_aula." às ".$termino_aula.")</span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:4;page-break-inside:avoid;height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span style='font-size:12.0pt;font-family:'
+                                Arial',sans-serif'>Turma:</span></b><span style='font-size:12.0pt;font-family:'
+                            Arial',sans-serif'> ".$ano."º ".$ano_semestre." - ".$nomeCurso." - ".$turno." -
+                            ".$numeroDiario."</span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:5;page-break-inside:avoid;height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span style='font-size:12.0pt;font-family:'
+                                Arial',sans-serif'>Disciplina:</span></b><span style='font-size:12.0pt;font-family:'
+                            Arial',sans-serif'> ".$nomeDisciplina." </span></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;page-break-inside:avoid;
+height:19.9pt'>
+                <td width=635 style='width:475.9pt;border:solid black 1.0pt;border-top:none;
+padding:0cm 3.5pt 0cm 3.5pt;height:19.9pt'>
+                    <p class=MsoNormal style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+3.0pt;margin-left:0cm;text-align:justify;layout-grid-mode:char'><b><span style='font-size:12.0pt;font-family:'
+                                Arial',sans-serif'>OBS: ".$obs." ".$obsTroca."</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <br>
+
+
+    <div align=center>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+            style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
+background:#CCCCCC;padding:0cm 5.4pt 0cm 5.4pt'>
+                    <p class=MsoNormal style='layout-grid-mode:char'><b><span style='font-size:
+12.0pt;font-family:' Arial',sans-serif'>CONTE&Uacute;DO</span></b></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:42.9pt'>
+                <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:42.9pt'>
+                    <ul style='margin-top:0cm' type=disc>
+                        <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;
+    layout-grid-mode:char'><span style='font-size:12.0pt;font-family:' Arial',sans-serif;
+                                mso-fareast-font-family:'Times New Roman''>".$cont_min."</span><span
+                                style='mso-fareast-font-family:' Times New Roman''>
+                                <o:p></o:p>
+                            </span></li>
+
+                    </ul>
+                    <p class=MsoNormal style='margin-left:18.0pt;layout-grid-mode:char'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <br>
+
+    <div align=center>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+            style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
+background:#CCCCCC;padding:0cm 5.4pt 0cm 5.4pt'>
+                    <p class=MsoNormal style='layout-grid-mode:char'><b><span style='font-size:
+12.0pt;font-family:' Arial',sans-serif'>ATIVIDADES</span></b></p>
+                </td>
+            </tr>
+            <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:36.7pt'>
+                <td width=637 valign=top style='width:477.7pt;border:solid black 1.0pt;
+border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:36.7pt'>
+                    <p class=MsoNormal style='layout-grid-mode:char'><span style='font-size:12.0pt;
+font-family:' Arial',sans-serif'>&nbsp;</span></p>
+                    <p class=MsoNormal style='layout-grid-mode:char'><span style='font-size:12.0pt;
+font-family:' Arial',sans-serif'></span></p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <p class=MsoNormal>&nbsp;</p>
+
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>";
         
          header("Content-Type: application/vnd.msword");
          header("Expires: 0");//no-cache
@@ -322,7 +323,7 @@ $numeroDiario = $row2['numeroDiario'];
 
 
 
-// volta para a pagina de cadastro de aulas
+die;
 ?>
 <script>
 window.location.href = "http://localhost/teste/pages.php";

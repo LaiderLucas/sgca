@@ -23,26 +23,26 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <script type="text/javascript" src="Scripts/jQuery.js"></script>
     <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <?php
-require_once('core/config.php');
+include_once('core/config.php');
 $pagina = $_COOKIE['routes'];
 $path = strstr($pagina,'_', true);
 
 if($path == 'add'){
-    include('adicionar/'.$pagina.'.php');
+    include_once('adicionar/'.$pagina.'.php');
 
 }elseif($path == 'editar'){
-    include('editar/'.$pagina.'.php');
+    include_once('editar/'.$pagina.'.php');
 
 }elseif($path == 'inserir'){
-    include('inserir/'.$pagina.'.php');
+    include_once('inserir/'.$pagina.'.php');
 
 }elseif($path == 'rel'){
-    include('relatorio/'.$pagina.'.php');
+    include_once('relatorio/'.$pagina.'.php');
 
 }else{
-    include('error.php');
+    include_once('error.php');
 
 };
 ?>

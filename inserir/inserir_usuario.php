@@ -32,7 +32,7 @@ if ($stmt->execute()){
 die;
 }
 
-
-// volta para a pagina de cadastro do usuário
-header('Location:../adicinar/add_usuarios.php');
 ?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>

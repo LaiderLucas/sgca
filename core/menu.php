@@ -40,7 +40,7 @@ protecao();
                 <li><a class="sidebar-sub-toggle"><i class="ti-book"></i> Diários <span
                             class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
-                        <li><a href="pages.php" onclick="setPageCookie('add_usuarios')">Cadastrar Diários </a></li>
+                        <li><a href="pages.php" onclick="setPageCookie('add_diarios')">Cadastrar Diários </a></li>
                         <li><a href="pages.php" onclick="setPageCookie('rel_diarios')">Diários Cadastrados</a></li>
                     </ul>
 
@@ -66,24 +66,6 @@ protecao();
                         <li><a href="pages.php" onclick="setPageCookie('rel_disciplinas')">Disciplinas Cadastradas</a>
                         </li>
                     </ul>
-
-
-                <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> Alunos <span
-                            class="sidebar-collapse-icon ti-angle-down"></span></a>
-                    <ul>
-                        <li><a href="pages.php" onclick="setPageCookie('add_alunos')">Cadastrar Alunos </a></li>
-                        <li><a href="pages.php" onclick="setPageCookie('rel_alunos')">Alunos Cadastrados</a></li>
-                    </ul>
-                <li><a href="pages.php" onclick="setPageCookie('add_matricula')"><i class="ti-check-box"></i> Matricular
-                        Alunos No Diário</a>
-
-                <li class="label">NOTAS E PRESENÇAS</li>
-                <li><a class="sidebar-sub-toggle"><i class="ti-plus"></i> Notas <span
-                            class="sidebar-collapse-icon ti-angle-down"></span></a>
-                    <ul>
-                        <li><a href="pages.php" onclick="setPageCookie('add_notas')">Lançar Notas</a></li>
-                    </ul>
-                </li>
 
                 <li class="label">CONFIGURAÇÕES DO SISTEMA</li>
                 <li><a class="sidebar-sub-toggle"><i class="ti-settings"></i> Configurações <span
@@ -113,80 +95,7 @@ protecao();
                 </div>
                 <div class="float-right">
                     <ul>
-
-                        <li class="header-icon dib"><i class="ti-bell"></i>
-                            <div class="drop-down">
-                                <div class="dropdown-content-heading">
-                                    <span class="text-left">Notificações Recentes</span>
-                                </div>
-                                <div class="dropdown-content-body">
-                                    <ul>
-
-                                        <li>
-                                            <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img"
-                                                    src="../assets/images/avatar/3.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Mr. John</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="text-center">
-                                            <a href="#" class="more-link">See All</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="header-icon dib"><i class="ti-email"></i>
-                            <div class="drop-down">
-                                <div class="dropdown-content-heading">
-                                    <span class="text-left">2 Novas Mensagens</span>
-                                    <a href="email.html"><i class="ti-pencil-alt pull-right"></i></a>
-                                </div>
-                                <div class="dropdown-content-body">
-                                    <ul>
-
-                                        <li class="notification-unread">
-                                            <a href="#">
-                                                <img class="pull-left m-r-10 avatar-img"
-                                                    src="../assets/images/avatar/2.jpg" alt="" />
-                                                <div class="notification-content">
-                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
-                                                    <div class="notification-heading">Mr. John</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li class="text-center">
-                                            <a href="#" class="more-link">See All</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="header-icon dib"><span class="user-avatar"><?php echo $_COOKIE['Nome'];?> <i
-                                    class="ti-angle-down f-s-10"></i></span>
-                            <div class="drop-down dropdown-profile">
-
-                                <div class="dropdown-content-body">
-                                    <ul>
-                                        <li><a href="#"><i class="ti-user"></i> <span>Perfil</span></a></li>
-
-
-                                        <li><a href="#"><i class="ti-settings"></i> <span>Configurações</span></a></li>
-
-
-                                        <li><a href="#" onclick="apagar()"><i class="ti-power-off"></i>
-                                                <span>Sair</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <li class="header-icon"><span class="user-avatar"><?php echo $_COOKIE['Nome'];?></span>
                         </li>
                     </ul>
                 </div>

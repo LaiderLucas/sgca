@@ -75,7 +75,7 @@ $stmt1->execute(array(
 
 }
 
-
-// volta para a pagina de cadastro de aulas
-header('Location:../index.php');
 ?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>

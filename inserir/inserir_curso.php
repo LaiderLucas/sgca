@@ -31,8 +31,7 @@ if ($stmt->execute()){
 	print_r($stmt);	
 die;
 }
-
-
-// volta para a pagina de cadastro do usuário
-header('Location:../adicionar/add_cursos.php');
 ?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>

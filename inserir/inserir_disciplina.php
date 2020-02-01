@@ -30,6 +30,7 @@ if ($stmt->execute()){
 	print_r($stmt);	
 die;
 }
-
-// volta para a pagina de cadastro do usuário
-header('Location:../adicionar/add_disciplinas.php');
+?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>

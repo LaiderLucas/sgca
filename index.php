@@ -21,7 +21,6 @@
     <link rel="apple-touch-icon" sizes="57x57" href="">
 
     <!-- Styles -->
-    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
     <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
     <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
@@ -331,11 +330,11 @@ ORDER BY dataAula DESC"; //LIMIT $inicio,$total_reg" ;
                                                         
                                                         
                                                         <input type='hidden' id='IDAula' name='IDAula'  value='" . $row['IDaula'] . "'>
-                                                        <i  class='fa fa-pencil'></i></button>
+                                                        <i  class='ti ti-pencil'></i></button>
                                                        
 
                                                         <a href='#' data-toggle='modal' data-target='#add-category-" . $row['IDaula'] . "' class='btn btn-info btn-outline btn-rounded' id='maisinfo-" . $row['IDaula'] . "'>
-                                                        <i class = 'fa fa-plus'></i> Info. </a>
+                                                        <i class = 'ti ti-plus'></i> Info. </a>
 
                                                         </td>
                                                         </form>

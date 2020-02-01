@@ -47,7 +47,7 @@ $instituicao = $_POST[$in];
 
 
 
-
-// volta para a pagina de cadastro do usuário
-header('Location:../adicionar/add_alunos.php');
 ?>
+<script>
+window.location.href = "http://localhost/teste/pages.php";
+</script>
