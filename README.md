@@ -9,42 +9,56 @@ O projeto inicialmente não contempla apenas o controle das aulas, não abordand
 
 ### Funcionalidade
 #### Configurações
+```
 Cadastro Simples de Usuários
+```
 
 #### Disciplinas
+```
 Cadastro de Disciplinas
 Relatório de Disciplinas Cadastradas
-
+```
 #### Cursos
+```
 Cadastro de Cursos
 Relatório de Cursos Cadastrados
-
+```
 #### Turmas
+```
 Cadastro de Turmas
 Relatório de Turmas Cadastradas
+```
 
 #### Diários
+```
 Cadastro de Diários
 Relatório de Diários Cadastrados
+```
 
 #### Troca de Aulas
+```
 Cadastro de Aulas Trocadas
 Lembrete de troca de aula
 Lançamento de troca junto com lançamento de aula
+```
 
 #### Aulas
+```
 Lançamento de aulas
 Edição de Aulas
 Geração de Plano de Aula (Doc)
 Lista das aulas
 Classificação por Bimestre/Semestre
 Filtros por Bimestre/Semestre, Nº Diario, Turma, Disciplina	Data, Horario, Nº Aulas
+```
 
 #### Login
+```
 Tela de Login
 Tempo de duração do cookie para 3600s
 Criptografia do Cookie Base64
 Criptografia da senha no Banco de Dados MD5
+```
 
 ### Pré Requisitos
 
