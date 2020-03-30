@@ -1,7 +1,7 @@
 # SGCA - Sistema de Gestão e Controle de Aulas
 
 Sistema desenvolvido como forma de apredizagem de desenvolvimento de em php, com o intuito de facilitar e controlar aulas
-Se o código não estiver dentro do padrão das boas práticas de desenvolvimento (com certeza está kkkk), não mu julguem estou apredendo a desenvolver e as boas práticas.
+Se o código não estiver dentro do padrão das boas práticas de desenvolvimento (com certeza está kkkk), não me julguem estou apredendo a desenvolver e utilizar as boas práticas.
 
 ## Iniciando
 
