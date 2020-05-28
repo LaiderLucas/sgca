@@ -5,7 +5,7 @@ Sistema desenvolvido para facilitar e controlar aulas
 ## Iniciando
 
 Esse projeto visa auxiliar professores a ter um maior controle sobre as aulas que foram lecionadas, visando o controle das mesma.
-O projeto inicialmente não contempla apenas o controle das aulas, não abordando frequência dos alunos, notas e matriculas.
+O projeto inicialmente contempla apenas o controle das aulas, não abordando frequência dos alunos, notas e matriculas.
 
 ### Funcionalidade
 #### Configurações
